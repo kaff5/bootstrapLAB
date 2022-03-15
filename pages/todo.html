@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="../bootstrap-4.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="ToDo.css">
+  <link rel="stylesheet" href="../fontawesome-free-6.0.0-beta2-web/css/all.css">
+
+  <title>Hello, world!</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">News<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="todo.html">ToDo Lists</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <content class="container">
+    <div class="card w-100 mt-3">
+      <div class="card-body pb-1">
+        <h5 class="card-title">Приоритеты элементов в ToDo:</h5>
+        <div class="d-flex" style="flex-direction: row;">
+          <div class="card d-flex mr-1 h6"
+            style="width: 95px; height: 30px; font-size: 0.9em; justify-content: center; flex-direction: row;">
+            <span class="my-auto">ОБЫЧНЫЙ</span>
+          </div>
+          <div class="card d-flex mr-1 bg-warning h6"
+            style="width: 85px; height: 30px; font-size: 0.9em; justify-content: center; flex-direction: row;">
+            <span class="my-auto">ВАЖНЫЙ</span>
+          </div>
+          <div class="card d-flex bg-danger h6 text-light"
+            style="width: 105px; height: 30px; font-size: 0.9em; justify-content: center; flex-direction: row;">
+            <span class="my-auto">КРИТИЧНЫЙ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="accordion mt-3" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+              data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              СОЗДАТЬ СПИСОК TODO
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body" style="padding: 0px;">
+            <form>
+              <div class="p-3">
+                <label for="validationDefault01">Название</label>
+                <input type="text" class="form-control" id="validationDefault01" required>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingOne" style="border-bottom: 0px;">
+                  <div class="d-flex ">
+                    <button class="btn d-flex bg-secondary h7 text-light mr-1" id="clearbuttonforCreatetodo"
+                      style="width: 95px; height: 35px;" type="button">
+                      <p class="my-auto mx-auto">Очистить</p>
+                    </button>
+                    <button class="btn card d-flex bg-success h7 text-light mr-1" id="createbuttonforCreatetodo"
+                      style="width: 90px; height: 35px;" type="button submit">
+                      <p class="my-auto mx-auto">Создать</p>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="accordion mt-3" id="accordion">
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse"
+              data-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+              СОЗДАТЬ ЭЛЕМЕНТ TODO
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body" style="padding: 0px;">
+            <form data-toggle="validator" role="form">
+              <div class="p-3">
+                <label for="validationDefault05">Заголовок</label>
+                <input type="text" class="form-control w-100" id="zagolovokname" value="" required>
+              </div>
+              <div class="d-flex flex-row" style="padding: 15px; justify-content: space-between;">
+                <div style="width: 48%;">
+                  <label for="inputState1">Приоритет</label>
+                  <select id="inputState1" class="form-control">
+                    <option selected>Обычный</option>
+                    <option>Важный</option>
+                    <option>Критичный</option>
+                  </select>
+                </div>
+                <div class="" style="width: 48%;">
+                  <label for="inputState2">Список</label>
+                  <select id="inputState2" class="form-control">
+                    <option selected>Список дел №1 - Бытовые / учебные</option>
+                    <option>Список дел №2 - Рабочие</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mb-3 p-3">
+                <label for="validationTextarea">Описание</label>
+                <textarea class="form-control" id="validationTextarea" required></textarea>
+              </div>
+
+
+
+
+              <div class="card">
+                <div class="card-header" id="headingTwo" style="border-bottom: 0px;">
+                  <div class="d-flex">
+                    <button class="btn d-flex bg-secondary h7 text-light mr-1" id="clearbutton"
+                      style="width: 95px; height: 35px;" type="button">
+                      <p class="my-auto mx-auto">Очистить</p>
+                    </button>
+                    <button class="btn card d-flex bg-success h7 text-light mr-1" id="createbutton"
+                      style="width: 90px; height: 35px;" type="submit button">
+                      <p class="my-auto mx-auto">Создать</p>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="card pl-0 pr-0 mt-3 pb-0" style="border-bottom: 0px;">
+      <ul class="nav nav-tabs mt-3" role="tablist" style="justify-content: center;" id="allSPISKI"></ul>
+
+      <li class="nav-item text-center d-none" id="SPISKI-template" role="presentation">
+        <a class="nav-link text-muted textForZag" data-toggle="tab" role="tab"></a>
+      </li>
+
+      <div id="allLists" class="tab-content"></div>
+
+      <div class="tab-pane fade card-templateforINFO d-none" role="tabpanel">
+        <div class="my-auto">
+          <div class="d-flex justify-content-between" style="border-bottom: 0px;">
+            <div class="h3 p-4 nameForZagf"></div>
+            <button type="button" class="btn btn-danger my-auto mr-3">
+              <i class="fas fa-trash-alt">
+              </i>
+              Удалить список
+            </button>
+          </div>
+          <ul class="card list-group list-group-flush listforTODO ml-3 mr-3"></ul>
+          <li class="list-group-item p-0 ml-0 mr-0 d-none getelem">
+            <div class="d-flex">
+              <span class="border-left" id="firstWorkKrit" style="width: 10px; border: 0px;"></span>
+              <div class="d-flex justify-content-between pl-3 pt-2 pb-2 pr-3 w-100" id="forCOMP">
+                <div>
+                  <div class="d-flex" style="flex-wrap: wrap;">
+                    <div class="mr-3 h5 zagolovokDo"></div>
+                    <div class="h5 text-muted dateDo"></div>
+                  </div>
+                  <div class="descriptionDo"></div>
+                </div>
+                <div class="btn-group mt-2 mb-2" style="max-height: 40px;">
+                  <button type="button" class="btn btn-outline-success forCom">
+                    <i class="fas fa-check"></i>
+                  </button>
+                  <button type="button" id="firstWorkButton" class="btn btn-outline-warning forEDIT" data-toggle="modal"
+                    data-target="#staticBackdrop">
+                    <i class="fas fa-pen"></i>
+                  </button>
+                  <button type="button" class="btn btn-outline-danger fordel">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="list-group-item p-0  mr-0 d-none ifComplete" style="background-color: #c3e6cb;">
+            <div class="d-flex">
+              <span class="border-left" id="firstWorkKrit" style="width: 10px; border-radius: 0px;"></span>
+              <div class="d-flex justify-content-between ml-4 pt-2 pb-2 pr-3 w-100">
+                <div>
+                  <div class="d-flex" style="flex-wrap: wrap;">
+                    <div class="mr-3 h5 zagolovokDo"></div>
+                    <div class="h5 text-muted dateDo"></div>
+                  </div>
+                  <div class="descriptionDo"></div>
+                </div>
+                <div class="btn-group mt-2 mb-1">
+                  <i class="fas text-success fa-check h1"></i>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+
+
+
+
+
+    <div class="modal fade bd-example-modal-lg" id="staticBackdrop" data-backdrop="static" data-keyboard="false"
+      tabindex="-1" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Редактирование элемента ToDo</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form data-toggle="validator" role="form">
+              <div class="p-3 d-flex justify-content-between">
+                <div style="width: 65%;">
+                  <label for="zagolovok">Заголовок</label>
+                  <input type="text" class="form-control w-100" id="zagolovokModel" value="" required>
+                </div>
+                <div style="width: 30%;">
+                  <label for="modelSpisok">Список</label>
+                  <select id="modelSpisok" class="form-control">
+                    <option selected>Обычный</option>
+                    <option>Важный</option>
+                    <option>Критичный</option>
+                  </select>
+                </div>
+
+              </div>
+              <div class="mb-3 p-3">
+                <label for="validationModel">Описание</label>
+                <textarea class="form-control" id="validationModel" required></textarea>
+              </div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="cancelModel">Отмена</button>
+            <button type="button" class="btn btn-success" id="sumbitFORM">Сохранить изменения</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </content>
+  <footer class="footer">
+    <p class="my-auto">Sticky footer example.</p>
+  </footer>
+
+  <script src="../jquery-3.6.0.min.js"></script>
+  <script src="../bootstrap-4.6/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="todo.js"></script>
+</body>
+
+</html>
